@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cqgmteh8t2oke"]
+
+[node name="CenterContainer" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Você Venceu e retornou para casa!!!
+Parabéns jovem aventureiro."
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Mais uma aventura"

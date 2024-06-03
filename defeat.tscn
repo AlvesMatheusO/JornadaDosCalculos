@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfpy7wp6dmlnj"]
+
+[ext_resource type="Script" path="res://defeat.gd" id="1_t64dc"]
+[ext_resource type="FontFile" uid="uid://by0vo5i1kahcr" path="res://Gameplay.ttf" id="2_lmbft"]
+
+[node name="CenterContainer" type="CenterContainer"]
+modulate = Color(1, 0.47451, 0.156863, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -142.0
+offset_top = -98.0
+offset_right = 156.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t64dc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(1, 0.415686, 1, 1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lmbft")
+text = "perdeu e retornou para o inicio!!!"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lmbft")
+text = "iniciar mais uma aventura"

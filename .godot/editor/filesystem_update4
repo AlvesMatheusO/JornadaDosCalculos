@@ -1,0 +1,8 @@
+res://terrain/scenes/level.tscn
+res://terrain/scenes/level2.tscn
+res://victory.tscn
+res://character.tscn
+res://boss.tscn
+res://terrain/scenes/objects_terrain.tscn
+res://terrain/scenes/interior.tscn
+res://start_screen.tscn

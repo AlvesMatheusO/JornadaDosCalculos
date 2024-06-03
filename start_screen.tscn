@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyei5b62qy6go"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_bsuns"]
+[ext_resource type="Texture2D" uid="uid://exaqvr7o48h4" path="res://startScreen.png" id="2_n8flj"]
+[ext_resource type="FontFile" uid="uid://by0vo5i1kahcr" path="res://Gameplay.ttf" id="3_kpbc7"]
+[ext_resource type="Texture2D" uid="uid://cjls2g3jq7weo" path="res://math.png" id="4_c8iba"]
+[ext_resource type="AudioStream" uid="uid://cmyglef8sa2tt" path="res://character/assets/startsound.mp3" id="5_nr71h"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 638.0
+offset_bottom = 412.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_bsuns")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 0.0627451, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 883.0
+offset_top = 889.0
+offset_right = 1058.0
+offset_bottom = 936.0
+theme_override_fonts/font = ExtResource("3_kpbc7")
+theme_override_font_sizes/font_size = 13
+text = "Iniciar Aventura"
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 0.0470588, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 879.0
+offset_top = 961.0
+offset_right = 1061.0
+offset_bottom = 1003.0
+theme_override_fonts/font = ExtResource("3_kpbc7")
+theme_override_font_sizes/font_size = 13
+text = "Sair"
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 171.0
+offset_right = 1367.0
+offset_bottom = 238.0
+theme_override_colors/font_color = Color(0.717647, 0.788235, 0.203922, 1)
+theme_override_colors/font_shadow_color = Color(0.87451, 0.537255, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_kpbc7")
+theme_override_font_sizes/font_size = 56
+text = "Jornada dos Calculos"
+uppercase = true
+
+[node name="background" type="Sprite2D" parent="."]
+modulate = Color(0.976471, 1, 0.74902, 1)
+z_index = -1
+position = Vector2(988.5, 525.5)
+scale = Vector2(1.94824, 1.86979)
+texture = ExtResource("2_n8flj")
+
+[node name="background2" type="Sprite2D" parent="."]
+modulate = Color(0.85098, 0.866667, 0.87451, 1)
+z_index = -1
+texture_filter = 1
+position = Vector2(967, 240)
+scale = Vector2(1.88511, 1.5798)
+texture = ExtResource("4_c8iba")
+
+[node name="Wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nr71h")
+volume_db = 10.593
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
